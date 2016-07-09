@@ -2,6 +2,9 @@
 
 include_once 'Command.php';
 include_once 'Television.php';
+/**
+ * 
+ */
 class CloseTvCommand implements Command
 {
 	public $tv;

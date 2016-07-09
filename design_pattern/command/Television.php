@@ -5,17 +5,17 @@ class Television
 {
 	public function openTv()
 	{
-		echo "´òé_ëŠÒ•"."<br>";
+		echo "æ‰“é–‹é›»è¦–"."<br>";
 	}
 	
 	public function closeTv()
 	{
-		echo "êPé]ëŠÒ•"."<br>";
+		echo "é—œé–‰é›»è¦–"."<br>";
 	}
 	
 	public function changeChannel()
 	{
-		echo "“QÌ¨"."<br>";
+		echo "æ›å°"."<br>";
 	}
 }
 

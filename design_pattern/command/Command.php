@@ -1,9 +1,9 @@
 <?php
 
 /**
- * 命令接口
+ * 注釋
  * 
- * /
+ */
 interface Command
 {
 	public function execute();
