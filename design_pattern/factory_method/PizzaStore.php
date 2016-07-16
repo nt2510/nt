@@ -10,7 +10,7 @@ abstract class PizzaStore
 		$factory = new SimplePizzaFactory;
 		$pizza = $factory->createPizza($type); */
 		
-		//ÒÔÇ°Õ{ÓÃº††Î¹¤Sí„“½¨Œ¦Ïó£¬¬FÔÚÕ{ÓÃ×Óîí„“½¨
+		//ä»¥å‰èª¿ç”¨ç°¡å–®å·¥å» ä¾†å‰µå»ºå°è±¡ï¼Œç¾åœ¨èª¿ç”¨å­é¡ä¾†å‰µå»º
 		$pizza = $this->createPizza($type);
 		
 		$pizza->prepare();
