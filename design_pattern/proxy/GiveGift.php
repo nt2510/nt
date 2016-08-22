@@ -1,7 +1,7 @@
 <?php
 
 
-public interface GiveGift
+interface GiveGift
 {
 	public function giveFlowers();
 
