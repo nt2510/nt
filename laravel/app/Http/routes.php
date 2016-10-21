@@ -10,9 +10,11 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-
+//Route::get('order/add', 'OrderController@add');
 Route::get('/', function () {
-    return view('welcome');
+    //return view('welcome');
+    //Route::get('order/add', 'OrderController@index');
+    
 });
 
 /*
@@ -29,3 +31,15 @@ Route::get('/', function () {
 Route::group(['middleware' => ['web']], function () {
     //
 });
+
+Route::group(['namespace'=>'Home'], function(){
+	
+	Route::get('order/add', 'OrderController@add');
+	
+});
+
+	
+
+	//Route::get('order/add', 'OrderController@add');
+
+
