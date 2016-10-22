@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Home;
+namespace App\Home;
 
 use App\User;
 use Validator;
@@ -13,12 +13,10 @@ class OrderController extends Controller
     
 	public function add()
 	{
+		echo 'vccd';
 		dd('eve');
 	}
 	
-	
-	
-
     
   
 }

@@ -10,11 +10,8 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-//Route::get('order/add', 'OrderController@add');
 Route::get('/', function () {
-    //return view('welcome');
-    //Route::get('order/add', 'OrderController@index');
-    
+    return view('welcome');
 });
 
 /*
@@ -27,19 +24,15 @@ Route::get('/', function () {
 | kernel and includes session state, CSRF protection, and more.
 |
 */
-
+	
 Route::group(['middleware' => ['web']], function () {
     //
 });
 
-Route::group(['namespace'=>'Home'], function(){
+Route::group(['prefix'=>'','namespace'=>'Home'], function(){
 	
-	Route::get('order/add', 'OrderController@add');
+	Route::get('/home/order/add', 'OrderController@add');
 	
-});
+}); 
 
 	
-
-	//Route::get('order/add', 'OrderController@add');
-
-
