@@ -11,16 +11,39 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 
+
+-- 导出 nt 的数据库结构
+CREATE DATABASE IF NOT EXISTS `nt` /*!40100 DEFAULT CHARACTER SET utf8 */;
+USE `nt`;
+
 -- 导出  表 nt.order 结构
 CREATE TABLE IF NOT EXISTS `order` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `user_id` int(10) NOT NULL DEFAULT '0',
+  `money` int(10) NOT NULL DEFAULT '0',
   `status` int(2) NOT NULL DEFAULT '0',
   `ispay` int(2) NOT NULL DEFAULT '0',
   `posttime` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   PRIMARY KEY (`id`),
   KEY `idx_user_id` (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='訂單表';
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8 COMMENT='訂單表';
+
+-- 数据导出被取消选择。
+-- 导出  表 nt.order_item 结构
+CREATE TABLE IF NOT EXISTS `order_item` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `oid` int(10) NOT NULL DEFAULT '0',
+  `user_id` int(10) NOT NULL DEFAULT '0',
+  `code` int(10) NOT NULL DEFAULT '0' COMMENT '服務編號',
+  `money` int(10) NOT NULL DEFAULT '0',
+  `status` int(2) NOT NULL DEFAULT '0',
+  `start_time` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `end_time` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `ispay` int(2) NOT NULL DEFAULT '0',
+  `posttime` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`id`),
+  KEY `idx_user_id` (`user_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8 COMMENT='訂單詳情表';
 
 -- 数据导出被取消选择。
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
