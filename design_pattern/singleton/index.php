@@ -2,7 +2,7 @@
 
 include 'Singleton.php';
 
-//Ö±½Ónew•þˆóåe£¬Òòžé˜‹Ôìº¯”µÊÇË½ÓÐµÄ
+//ç›´æŽ¥newæœƒå ±éŒ¯ï¼Œå› ç‚ºæ§‹é€ å‡½æ•¸æ˜¯ç§æœ‰çš„
 //$singleton = new Singleton;
 //$instance = $singleton->getInstance();
 $instance = Singleton::getInstance();

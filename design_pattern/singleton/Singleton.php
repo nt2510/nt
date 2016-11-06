@@ -2,18 +2,18 @@
 
 class Singleton
 {
-	//Œ¦Ïóìo‘B£¬±£×CÎ¨Ò»ŒÀý¡£¶¨ÁxžéË½ÓÃ£¬·ÀÖ¹Íâ²¿ÔL†–¡£
+	//å°è±¡éœæ…‹ï¼Œä¿è­‰å”¯ä¸€å¯¦ä¾‹ã€‚å®šç¾©ç‚ºç§ç”¨ï¼Œé˜²æ­¢å¤–éƒ¨è¨ªå•ã€‚
 	private static $uniqueInstance;
 	
 	
-	//˜‹Ôìº¯”µË½ÓÐ£¬·ÀÖ¹Íâ²¿ŒÀý»¯
+	//æ§‹é€ å‡½æ•¸ç§æœ‰ï¼Œé˜²æ­¢å¤–éƒ¨å¯¦ä¾‹åŒ–
 	private function __construct(){
 		echo 'this is construct'."<br>";
 	}
 	
 	/**
-	 * ¶¨Áxžéìo‘B£¬·½±ãÍâ²¿Õ{ÓÃ¡£
-	 * Èç¹û·Çìo‘B£¬Íâ²¿Ö»ÄÜŒÀý»¯£¬ÔÙÕ{ÓÃ¡£µ«˜‹Ôìº¯”µžéË½ÓÐ£¬Íâ²¿Ÿo·¨ŒÀý»¯¡£
+	 * å®šç¾©ç‚ºéœæ…‹ï¼Œæ–¹ä¾¿å¤–éƒ¨èª¿ç”¨ã€‚
+	 * å¦‚æžœéžéœæ…‹ï¼Œå¤–éƒ¨åªèƒ½å¯¦ä¾‹åŒ–ï¼Œå†èª¿ç”¨ã€‚ä½†æ§‹é€ å‡½æ•¸ç‚ºç§æœ‰ï¼Œå¤–éƒ¨ç„¡æ³•å¯¦ä¾‹åŒ–ã€‚
 	 */
 	public static function getInstance()
 	{
