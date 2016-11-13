@@ -1,41 +1,19 @@
 <?php
 
-include 'Db.php';
 
+$module = $_REQUEST['module'] ? $_REQUEST['module'] : 'Index';
+$action = $_REQUEST['action'] ? $_REQUEST['action'] : 'Index';
 
-/* $db = Db::getInstance();
-
-$sql = "insert into `order` set user_id = 37,money=88,status=1,ispay=1,posttime='2016-11-06 17:00:00'";
-//$id = $db->insert($sql);
-//var_dump($id);
-
-$sql = "update `order` set money=44 where id = 13";
-$num = $db->update($sql);
-
-
-$sql = "delete from `order`  where id = 12";
-//$db->delete($sql);
-
-$sql = "select * from `order`";
-$res = $db->select($sql);
-//var_dump($res); */
+define('BASE_PATH',str_replace('','/',dirname(__FILE__)));//定义系统目录
+$moduleFile = BASE_PATH."/Controllers/".$module."Controller.php";//die($moduleName);
+if(!file_exists($moduleFile)) die('不存在的module');
+require_once $moduleFile;
+$moduleName = $module."Controller";
+$controller = new $moduleName;
+$controller->{$action}();
 
 
 
 
-include 'PayHandle.php';
-
-include 'IOSPay.php';
-include 'CoinsPay.php';
-
-$payHandle = new PayHandle();
-
-$iOSPay = new IOSPay();
-$payHandle->setPayMethod($iOSPay);
-$payHandle->pay($params);
-
-$coinsPay = new CoinsPay();
-$payHandle->setPayMethod($coinsPay);
-$payHandle->pay($params);
 
 
