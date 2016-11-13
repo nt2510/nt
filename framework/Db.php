@@ -15,12 +15,20 @@ class Db
 	}
 	
 	/**
+	 * 防止克隆
+	 */
+	private function __clone()
+	{
+		
+	}
+	
+	/**
 	 * 定義為靜態，方便外部調用。
 	 * 如果非靜態，外部只能實例化，再調用。但構造函數為私有，外部無法實例化。
 	 */
 	public static function getInstance()
 	{
-		if(!self::$uniqueInstance){
+		if(!(self::$uniqueInstance instanceof self)){
 			self::$uniqueInstance = new Db;
 		}
 		return self::$uniqueInstance;
