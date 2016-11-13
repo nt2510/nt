@@ -3,7 +3,7 @@
 include 'Db.php';
 
 
-$db = Db::getInstance();
+/* $db = Db::getInstance();
 
 $sql = "insert into `order` set user_id = 37,money=88,status=1,ispay=1,posttime='2016-11-06 17:00:00'";
 //$id = $db->insert($sql);
@@ -18,5 +18,24 @@ $sql = "delete from `order`  where id = 12";
 
 $sql = "select * from `order`";
 $res = $db->select($sql);
-//var_dump($res);
+//var_dump($res); */
+
+
+
+
+include 'PayHandle.php';
+
+include 'IOSPay.php';
+include 'CoinsPay.php';
+
+$payHandle = new PayHandle();
+
+$iOSPay = new IOSPay();
+$payHandle->setPayMethod($iOSPay);
+$payHandle->pay($params);
+
+$coinsPay = new CoinsPay();
+$payHandle->setPayMethod($coinsPay);
+$payHandle->pay($params);
+
 

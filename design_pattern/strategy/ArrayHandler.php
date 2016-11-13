@@ -8,7 +8,7 @@ class ArrayHandler
 		$this->sortObj->sort($arr);
 	}
 	
-	public function setSort($obj){
+	public function setSort(Sort $obj){
 		$this->sortObj = $obj;
 	}
 }
