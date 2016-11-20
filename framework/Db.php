@@ -29,7 +29,7 @@ class Db
 	public static function getInstance()
 	{
 		if(!(self::$uniqueInstance instanceof self)){
-			self::$uniqueInstance = new Db;
+			self::$uniqueInstance = new self;
 		}
 		return self::$uniqueInstance;
 		

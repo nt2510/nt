@@ -18,7 +18,7 @@ class Singleton
 	public static function getInstance()
 	{
 		if(!self::$uniqueInstance){
-			self::$uniqueInstance = new Singleton;
+			self::$uniqueInstance = new self;
 		}
 		return self::$uniqueInstance;
 		
