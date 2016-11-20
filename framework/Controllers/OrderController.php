@@ -30,7 +30,25 @@ class OrderController extends BaseController
 		//var_dump($res);
 		include BASE_PATH .'/template/order.php';	
 	}
-
+	
+	public function orderNum()
+	{	
+		include_once BASE_PATH.'/MongoDB.php';
+		$db = MonDB::getInstance();
+		$db = $db->conn;
+		//$db->createCollection('order_item_use');
+		$order = $db->order;
+		
+		$data = array('name'=>'best book', 'stauts'=>0);
+		//$order->insert($data);
+		
+		$data = $order->find();
+		foreach($data as $val){
+			var_dump($val['name']);
+		}
+		
+		$order->update(array('code'=>'10'), array('name'=>'where is animals'));
+	}
 }
 
 
