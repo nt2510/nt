@@ -11,6 +11,9 @@ class MonDB
 		$m = new MongoClient();
 		$db = $m->nt;
 		
+		$db = new \MongoDB\Driver\Manager("mongodb://".self::MG_USERNAME.":".self::MG_PWD."@".self::MG_IP.":".self::MG_PORT);
+		dd($db);
+		
 		$this->conn = $db;
 	}
 	
