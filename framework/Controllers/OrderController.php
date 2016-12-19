@@ -1,6 +1,7 @@
 <?php
 require_once 'BaseController.php';
 
+require_once BASE_PATH.'/Logic/OrderLogic.php';
 /**
  * 訂單控制器
  * @author ntlee
@@ -14,6 +15,9 @@ class OrderController extends BaseController
 		$db = Db::getInstance();
 		$sql = "insert into `order` set user_id = 37,money=88,status=1,ispay=1,posttime='2016-11-06 17:00:00'";
 		$id = $db->insert($sql);
+		
+		$orderLogic = new OrderLogic();
+		$orderLogic->useObserver();
 
 		$url = "index.php?module=order&action=detail&id={$id}";
 		header("Location:".$url);
