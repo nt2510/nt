@@ -1,7 +1,11 @@
 <?php
+namespace App\Home;
+
 require_once 'BaseController.php';
 
-require_once BASE_PATH.'/Logic/OrderLogic.php';
+//require_once BASE_PATH.'/app/Logic/OrderLogic.php';
+use App\Logic\OrderLogic;
+use Db;
 /**
  * 訂單控制器
  * @author ntlee
@@ -12,12 +16,16 @@ class OrderController extends BaseController
 	public function add()
 	{
 		include BASE_PATH.'/Db.php';			
-		$db = Db::getInstance();
+		$db = Db::getInstance();//var_dump($db);
 		$sql = "insert into `order` set user_id = 37,money=88,status=1,ispay=1,posttime='2016-11-06 17:00:00'";
 		$id = $db->insert($sql);
+		//var_dump($sql);
+		//var_dump($id);//exit;
 		
 		$orderLogic = new OrderLogic();
 		$orderLogic->useObserver();
+		
+		exit;
 
 		$url = "index.php?module=order&action=detail&id={$id}";
 		header("Location:".$url);

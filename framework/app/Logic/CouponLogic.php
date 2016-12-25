@@ -1,6 +1,7 @@
 <?php
-require_once 'BaseLogic.php';
-include_once BASE_PATH."/include/Observer.php";
+namespace App\Logic;
+
+use App\Component\Observer;
 /**
  * 優惠券邏輯類
  * @author ntlee

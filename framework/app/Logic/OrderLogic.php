@@ -1,8 +1,12 @@
 <?php
-require_once 'BaseLogic.php';
-require_once BASE_PATH.'/include/Subject.php';
-require_once 'SmsLogic.php';
-require_once 'CouponLogic.php';
+namespace App\Logic;
+
+use App\Logic\SmsLogic;
+use App\Logic\BaseLogic;
+use App\Logic\CouponLogic;
+use App\Component\Subject;
+use App\Component\Observer;
+
 /**
  * 訂單邏輯類
  * @author ntlee
@@ -11,6 +15,7 @@ require_once 'CouponLogic.php';
 class OrderLogic extends BaseLogic implements Subject
 {
 	private $observers = array();
+	
 	public function registerObserver(Observer $observer)
 	{
 		if(!in_array($observer, $this->observers)){

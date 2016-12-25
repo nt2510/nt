@@ -1,4 +1,5 @@
 <?php
+namespace App\Component;
 
 /**
  * 觀察者抽象類

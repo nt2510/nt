@@ -1,4 +1,6 @@
 <?php
+namespace App\Home;
+
 require_once 'BaseController.php';
 
 /**
