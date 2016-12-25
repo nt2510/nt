@@ -1,9 +1,6 @@
 <?php
 namespace App\Home;
 
-require_once 'BaseController.php';
-
-//require_once BASE_PATH.'/app/Logic/OrderLogic.php';
 use App\Logic\OrderLogic;
 use Db;
 /**
