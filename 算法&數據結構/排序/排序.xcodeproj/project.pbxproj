@@ -246,6 +246,7 @@
 				01E1C4D31E598C40001D9C2B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
