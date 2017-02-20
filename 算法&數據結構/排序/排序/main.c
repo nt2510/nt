@@ -33,13 +33,26 @@ void InsertSort(Item a[], int left, int right)
             compexch(a[j-1], a[j]);
 }
 
+/*選擇排序 將要排序的對象分作兩部份，一個是已排序的，一個是未排序的。如果排序是由小而大，從後端未排序部份選擇一個最小值，並放入前端已排序部份的最後一個。*/
+void SelectionSort(Item a[], int left, int right)
+{
+    int i,j;
+    for(i=left;i<=right;i++)
+    {
+        int min = i;
+        for(j=i+1;j<=right;j++)
+            if(less(a[j],a[min])) min=j;
+        exac(a[i],a[min]);
+    }
+}
+
 int main(int argc, const char * argv[]) {
     // insert code here...
     
     int a[5] = {3,5,4,1,2};
     //BubbleSort(a, 0, 4);
-    InsertSort(a, 0, 4);
-    
+    //InsertSort(a, 0, 4);
+    SelectionSort(a, 0, 4);
     
     for(int i=0;i<5;i++)
         printf("%3d",a[i]);
