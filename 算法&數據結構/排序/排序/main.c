@@ -24,11 +24,21 @@ void BubbleSort(Item a[],int left, int right)
             compexch(a[j-1],a[j]);
 }
 
+/*插入排序*//*它的工作原理是通过构建有序序列，对于未排序数据，在已排序序列中从后向前扫描，找到相应位置并插入*/
+void InsertSort(Item a[], int left, int right)
+{
+    int i,j;
+    for(i=left+1; i<= right; i++)
+        for(j=i; j>left; j--)
+            compexch(a[j-1], a[j]);
+}
+
 int main(int argc, const char * argv[]) {
     // insert code here...
     
     int a[5] = {3,5,4,1,2};
-    BubbleSort(a, 0, 4);
+    //BubbleSort(a, 0, 4);
+    InsertSort(a, 0, 4);
     
     
     for(int i=0;i<5;i++)
