@@ -4,15 +4,14 @@ namespace App\Home;
 
 use DB;
 /**
- * 訂單控制器
+ * 會員
  * @author ntlee
- * @version 2016-11-13
+ * @version 2017-02-28
  */
 class UserController extends BaseController
 {
 	public function doReg()
-	{
-		include BASE_PATH.'/Db.php';			
+	{				
 		$db = DB::getInstance();//var_dump($db);
 		$username = $_POST['username'];
 		$pwd = $_POST['pwd'];
@@ -35,9 +34,6 @@ class UserController extends BaseController
 	
 	public function reg()
 	{
-		//include BASE_PATH.'/Db.php';
-		
-		//var_dump($res);
 		include BASE_PATH .'/template/reg.php';
 	}
 	

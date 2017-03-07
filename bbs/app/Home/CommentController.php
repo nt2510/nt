@@ -3,17 +3,17 @@ namespace App\Home;
 
 use DB;
 /**
- * 訂單控制器
+ * 留言
  * @author ntlee
- * @version 2016-11-13
+ * @version 2017-02-28
  */
 class CommentController extends BaseController
 {
 	
 	public function doPost()
 	{
-		//include BASE_PATH.'/Db.php';
-		$db = DB::getInstance();//var_dump($db);
+
+		$db = DB::getInstance();
 		$user_id = 3;
 		$content = $_POST['content'];
 		
@@ -21,10 +21,7 @@ class CommentController extends BaseController
 		$sql = "insert into `comment` set user_id = '{$user_id}', content='{$content}', posttime='{$posttime}'";
 		$id = $db->insert($sql);
 		var_dump($sql);
-		//var_dump($id);//exit;
-	
-		//$orderLogic = new OrderLogic();
-		//$orderLogic->useObserver();
+
 		var_dump($id);
 		exit;
 	
@@ -49,16 +46,12 @@ class CommentController extends BaseController
 	}
 	
 	public function post()
-	{
-		//include_once BASE_PATH.'/Db.php';
-		
+	{		
 		$db = DB::getInstance();
 		
 		$sql = "select * from `comment`";
 		$res = $db->select($sql);
-		//var_dump($res);
-		
-		//var_dump($res);
+
 		include BASE_PATH .'/template/post.php';
 	}
 	

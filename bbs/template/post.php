@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>訂單</title>
+    <title>留言</title>
   
 </head>
 <body>
@@ -14,9 +14,6 @@
 <div>
 
 <?php 
-
-//include_once BASE_PATH.'/Db.php';
-
 $db = Db::getInstance();
 
 $sql = "select * from `comment`";
@@ -41,7 +38,6 @@ foreach($res as $val){
 </div>
 <div>
 <?php 
-//include_once BASE_PATH.'/Db.php';
 $user_id = 3;
 $db = Db::getInstance();
 $sql = "select * from `user` where user_id = '{$user_id}' and is_black = 1";
