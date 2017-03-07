@@ -15,7 +15,7 @@
 
 <?php 
 
-include_once BASE_PATH.'/Db.php';
+//include_once BASE_PATH.'/Db.php';
 
 $db = Db::getInstance();
 
@@ -41,7 +41,7 @@ foreach($res as $val){
 </div>
 <div>
 <?php 
-include_once BASE_PATH.'/Db.php';
+//include_once BASE_PATH.'/Db.php';
 $user_id = 3;
 $db = Db::getInstance();
 $sql = "select * from `user` where user_id = '{$user_id}' and is_black = 1";

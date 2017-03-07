@@ -1,8 +1,7 @@
 <?php
 namespace App\Home;
 
-use App\Logic\OrderLogic;
-use Db;
+use DB;
 /**
  * 訂單控制器
  * @author ntlee
@@ -13,8 +12,8 @@ class AdminController extends BaseController
 	
 	public function doReg()
 	{
-		include BASE_PATH.'/Db.php';
-		$db = Db::getInstance();//var_dump($db);
+		
+		$db = DB::getInstance();//var_dump($db);
 		$username = $_POST['username'];
 		$pwd = $_POST['pwd'];
 		$pwd = md5($pwd);
@@ -36,7 +35,7 @@ class AdminController extends BaseController
 	
 	public function reg()
 	{
-		include BASE_PATH.'/Db.php';
+		
 	
 		//var_dump($res);
 		include BASE_PATH .'/template/adminReg.php';

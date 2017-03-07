@@ -1,6 +1,6 @@
 <?php
 
-class Db
+class DB
 {
 	//對象靜態，保證唯一實例。定義為私用，防止外部訪問。
 	private static $uniqueInstance;
