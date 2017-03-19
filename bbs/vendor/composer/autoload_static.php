@@ -6,7 +6,39 @@ namespace Composer\Autoload;
 
 class ComposerStaticInit66e0c4f93753fb94407bd5c73b693e16
 {
+    public static $files = array (
+        '5255c38a0faeba867671b61dfda6d864' => __DIR__ . '/..' . '/paragonie/random_compat/lib/random.php',
+        '72579e7bd17821bb1321b87411366eae' => __DIR__ . '/..' . '/illuminate/support/helpers.php',
+        '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
+        '3a37ebac017bc098e9a86b35401e7a68' => __DIR__ . '/..' . '/mongodb/mongodb/src/functions.php',
+    );
+
     public static $prefixLengthsPsr4 = array (
+        'S' => 
+        array (
+            'Symfony\\Polyfill\\Mbstring\\' => 26,
+            'Symfony\\Component\\Translation\\' => 30,
+        ),
+        'P' => 
+        array (
+            'Predis\\' => 7,
+        ),
+        'M' => 
+        array (
+            'MongoDB\\' => 8,
+        ),
+        'I' => 
+        array (
+            'Illuminate\\Support\\' => 19,
+            'Illuminate\\Events\\' => 18,
+            'Illuminate\\Database\\' => 20,
+            'Illuminate\\Contracts\\' => 21,
+            'Illuminate\\Container\\' => 21,
+        ),
+        'C' => 
+        array (
+            'Carbon\\' => 7,
+        ),
         'A' => 
         array (
             'App\\' => 4,
@@ -14,9 +46,70 @@ class ComposerStaticInit66e0c4f93753fb94407bd5c73b693e16
     );
 
     public static $prefixDirsPsr4 = array (
+        'Symfony\\Polyfill\\Mbstring\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
+        ),
+        'Symfony\\Component\\Translation\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/translation',
+        ),
+        'Predis\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/predis/predis/src',
+        ),
+        'MongoDB\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/mongodb/mongodb/src',
+        ),
+        'Illuminate\\Support\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/illuminate/support',
+        ),
+        'Illuminate\\Events\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/illuminate/events',
+        ),
+        'Illuminate\\Database\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/illuminate/database',
+        ),
+        'Illuminate\\Contracts\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/illuminate/contracts',
+        ),
+        'Illuminate\\Container\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/illuminate/container',
+        ),
+        'Carbon\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon',
+        ),
         'App\\' => 
         array (
             0 => __DIR__ . '/../..' . '/app',
+        ),
+    );
+
+    public static $prefixesPsr0 = array (
+        'J' => 
+        array (
+            'Jenssegers\\Mongodb' => 
+            array (
+                0 => __DIR__ . '/..' . '/jenssegers/mongodb/src',
+            ),
+            'Jenssegers\\Eloquent' => 
+            array (
+                0 => __DIR__ . '/..' . '/jenssegers/mongodb/src',
+            ),
+        ),
+        'D' => 
+        array (
+            'Doctrine\\Common\\Inflector\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/doctrine/inflector/lib',
+            ),
         ),
     );
 
@@ -29,6 +122,7 @@ class ComposerStaticInit66e0c4f93753fb94407bd5c73b693e16
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit66e0c4f93753fb94407bd5c73b693e16::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit66e0c4f93753fb94407bd5c73b693e16::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit66e0c4f93753fb94407bd5c73b693e16::$prefixesPsr0;
             $loader->classMap = ComposerStaticInit66e0c4f93753fb94407bd5c73b693e16::$classMap;
 
         }, null, ClassLoader::class);
