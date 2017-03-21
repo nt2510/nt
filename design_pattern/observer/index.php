@@ -1,10 +1,24 @@
 <?php
 
-include 'WeatherData.php';
+include 'WeatherSubject.php';
+include 'TempObserver.php';
+include 'HumidityObserver.php';
+include 'PressureObserver.php';
 
-$weatherData = new WeatherData();
-$weatherData->setMeasurements(20,30,40);
-$weatherData->setMeasurements(100,90,80);
+$weatherSubject = new WeatherSubject();
+$tempObserver = new TempObserver();
+$humidityObserver = new HumidityObserver();
+$pressureObserver = new PressureObserver();
+
+$weatherSubject->register($tempObserver);
+$weatherSubject->register($humidityObserver);
+$weatherSubject->register($pressureObserver);
+
+$weatherSubject->notify();
+
+
+
+
 
 
 
