@@ -1,5 +1,5 @@
 <?php
-
+namespace observer;
  interface Subject
 {	
 	public function register(Observer $observer);

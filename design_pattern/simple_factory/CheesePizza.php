@@ -1,5 +1,5 @@
 <?php
-include_once 'Pizza.php';
+namespace simple_factory;
 class CheesePizza extends Pizza
 {
 	

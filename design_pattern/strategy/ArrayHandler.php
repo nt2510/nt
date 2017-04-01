@@ -1,5 +1,5 @@
 <?php
-
+namespace strategy;
 class ArrayHandler
 {
 	private $sortObj;

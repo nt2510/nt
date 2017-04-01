@@ -1,10 +1,10 @@
 <?php
-include_once 'Sort.php';
+namespace strategy;
 class SelectionSort implements Sort
 {
 	public function sort($arr)
 	{
-		echo 'this is SelectionSort';
+		echo "this is SelectionSort<br>";
 	}
 }
 

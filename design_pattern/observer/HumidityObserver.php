@@ -1,5 +1,5 @@
 <?php
-include_once 'Observer.php';
+namespace observer;
 class HumidityObserver implements Observer
 {
 	public function update()

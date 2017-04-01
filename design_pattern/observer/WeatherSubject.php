@@ -1,5 +1,5 @@
 <?php
-include_once 'Subject.php';
+namespace observer;
 class WeatherSubject implements Subject
 {
 	private $observers=array();

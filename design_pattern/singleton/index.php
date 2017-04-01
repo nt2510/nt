@@ -1,6 +1,12 @@
 <?php
+use singleton\Singleton;
 
-include 'Singleton.php';
+spl_autoload_register(function($class){
+	$file = str_replace('\\', DIRECTORY_SEPARATOR, __DIR__ . DIRECTORY_SEPARATOR.'..'. DIRECTORY_SEPARATOR. $class . '.php');
+	if(is_file($file)) {
+		require_once($file);
+	}
+});
 
 //直接new會報錯，因為構造函數是私有的
 //$singleton = new Singleton;
@@ -9,8 +15,4 @@ $instance = Singleton::getInstance();
 $instance->test();
 var_dump($instance);
 
-exit;
 
-$instance = $singleton->getInstance2();
-
-var_dump($instance);

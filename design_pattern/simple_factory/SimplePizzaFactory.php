@@ -1,5 +1,5 @@
 <?php
-
+namespace simple_factory;
 class SimplePizzaFactory
 {
 	

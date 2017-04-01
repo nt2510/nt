@@ -1,25 +1,24 @@
 <?php
+use strategy\ArrayHandler;
+use strategy\BubbleSort;
+use strategy\InsertionSort;
 
-include 'ArrayHandler.php';
+spl_autoload_register(function($class){
+	$file = str_replace('\\', DIRECTORY_SEPARATOR, __DIR__ . DIRECTORY_SEPARATOR.'..'. DIRECTORY_SEPARATOR. $class . '.php');
+	if(is_file($file)) {
+		require_once($file);
+	}
+});
 
-
-
-
-include 'BubbleSort.php';
-$bubbleSort = new BubbleSort;
-
-include 'InsertionSort.php';
-$insertionSort = new InsertionSort;
-
-
+	
 $arr = array(1,2);
-
 $arrayHandler = new ArrayHandler;
 
-
-$arrayHandler->setSort($bubbleSort);
+//策略一
+$arrayHandler->setSort(new BubbleSort());
 $arrayHandler->sort($arr);
 
-$arrayHandler->setSort($insertionSort);
+//策略二
+$arrayHandler->setSort(new InsertionSort());
 $arrayHandler->sort($arr);
 

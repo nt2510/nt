@@ -1,5 +1,5 @@
 <?php
-include_once 'Observer.php';
+namespace observer;
 class PressureObserver implements Observer
 {
 	public function update()

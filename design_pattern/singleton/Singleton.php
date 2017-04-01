@@ -1,5 +1,5 @@
 <?php
-
+namespace singleton;
 class Singleton
 {
 	//對象靜態，保證唯一實例。定義為私用，防止外部訪問。
@@ -17,16 +17,15 @@ class Singleton
 	 */
 	public static function getInstance()
 	{
-		if(!self::$uniqueInstance){
+		if(!(self::$uniqueInstance instanceof self)){
 			self::$uniqueInstance = new self;
 		}
-		return self::$uniqueInstance;
-		
+		return self::$uniqueInstance;	
 	}
 	
 	public function test()
 	{
-		echo 'this is test'."<br>";
+		echo 'this is 單例'."<br>";
 	}
 	
 	

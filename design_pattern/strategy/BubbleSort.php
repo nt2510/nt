@@ -1,11 +1,10 @@
 <?php
-
-include_once 'Sort.php';
+namespace strategy;
 class BubbleSort implements Sort
 {
 	public function sort($arr)
 	{
-		echo 'this is BubbleSort';
+		echo "this is BubbleSort<br>";
 	}
 }
 
