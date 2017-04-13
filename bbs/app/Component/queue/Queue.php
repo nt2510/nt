@@ -13,7 +13,7 @@ class Queue
 	public $redis;
 	public function __construct()
 	{
-		$this->redis = new \Predis\Client(array('host'=>'192.168.8.117','port'=>'6379'));
+		$this->redis = new \Predis\Client(array('host'=>'127.0.0.1','port'=>'6379'));
 	}
 	
 	public function push($key,$value)
