@@ -7,4 +7,5 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'DB' => $baseDir . '/lib/DB.php',
+    'MongoDB' => $baseDir . '/lib/MongoDB.php',
 );

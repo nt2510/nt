@@ -115,6 +115,7 @@ class ComposerStaticInit66e0c4f93753fb94407bd5c73b693e16
 
     public static $classMap = array (
         'DB' => __DIR__ . '/../..' . '/lib/DB.php',
+        'MongoDB' => __DIR__ . '/../..' . '/lib/MongoDB.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

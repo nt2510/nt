@@ -1,11 +1,11 @@
 <?php
 namespace App\Home;
 
-
 use DB;
 use App\Jobs\NewsSyncJob;
 use App\Jobs\NewsSendJob;
 use App\Jobs\RecomJob;
+
 /**
  * 任务
  * @author ntlee
@@ -17,7 +17,7 @@ class JobController extends BaseController
 	public function index()
 	{
 		echo 'this is index'."<br>";
-		$newsJob = new NewsJob();
+		$newsJob = new NewsSyncJob();
 		$newsJob->handle();
 	}
 	

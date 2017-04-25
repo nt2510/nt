@@ -31,14 +31,8 @@ class DB
 		if(!(self::$uniqueInstance instanceof self)){
 			self::$uniqueInstance = new self;
 		}
-		return self::$uniqueInstance;
-		
-	}
-	
-	public function test()
-	{
-		echo 'this is test'."<br>";
-	}
+		return self::$uniqueInstance;	
+	}	
 	
 	public function select($sql)
 	{	
