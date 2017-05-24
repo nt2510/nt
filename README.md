@@ -7,24 +7,9 @@
 
 ## 目录
 
-- PHP(doing)
+- PHP    
 
-  - 符合PSR的PHP编程规范(含部分个人建议)
-
-    - 实例
-    - 文档
-
-  - 基础知识[读(R)好(T)文(F)档(M)]
-
-    - [数据类型](http://php.net/manual/zh/language.types.php)
-    - [运算符优先级](http://php.net/manual/zh/language.operators.precedence.php)
-    - [string函数](http://php.net/ref.strings.php)
-    - [array函数](http://php.net/manual/zh/ref.array.php)
-    - [math函数](http://php.net/manual/zh/ref.math.php)
-    - [面向对象](http://php.net/manual/zh/language.oop5.php)
-    
-
-- Mysql(doing)
+- Mysql
 
   - 常用sql语句
   - 引擎
