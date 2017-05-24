@@ -16,42 +16,17 @@
   - php扩展
 
 - Mysql
-
-  - 常用sql语句
-  - 引擎
-    - InnoDB
-    - MyISAM
-    - Memory
-    - Archive\Blackhole\CSV\Federated\merge\NDB
-  - 事务隔离级别
-    - READ UNCOMMITTED:未提交读
-    - READ COMMITTED：提交读/不可重复读
-    - REPEATABLE READ：可重复读(MYSQL默认事务隔离级别)
-    - SERIALIZEABLE：可串行化
+  - 搜索引擎配置项
   - 索引
-    - B-Tree
-    - 哈希索引(hash index)
-    - 空间数据索引(R-Tree)
-    - 全文索引
-  - 锁
-    - 悲观锁
-    - 乐观锁
-  - 分表
-    - 垂直分表
-    - 水平分表
-  - sql优化
-  - 主从配置
+  - b tree
+  - 事务（隔离级别、锁）
+  - 搭建主从
+  - 搭建集群
+  - 触发器、分区
+  - 源码
 
 - Redis(doing)
 
-  - 常用命令
-  - 实现原理&与memcache区别
-  - 常见使用场景实战
-    - [缓存]
-    - [队列]
-    - [悲观锁]
-    - [乐观锁]
-    - [订阅/推送]
 
 - 设计模式(done/fixing)
 
@@ -136,7 +111,7 @@
 
 - 计算机基础(doing)
 
-  - [linux常用命令]
+  - 命令
   - shell
-
-- 高并发相关(not-start)
+  - 系统原理：内存管理、磁盘管理、nfs、模块加载
+  
