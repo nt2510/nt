@@ -7,60 +7,26 @@
 
 ## 目录
 
-- PHP(doing)
+- PHP    
+  - php工作机制原理
+  - 框架源码
+  - 自己写框架
+  - oop
+  - spl、反射
+  - php扩展
 
-  - 符合PSR的PHP编程规范(含部分个人建议)
-
-    - 实例
-    - 文档
-
-  - 基础知识[读(R)好(T)文(F)档(M)]
-
-    - [数据类型](http://php.net/manual/zh/language.types.php)
-    - [运算符优先级](http://php.net/manual/zh/language.operators.precedence.php)
-    - [string函数](http://php.net/ref.strings.php)
-    - [array函数](http://php.net/manual/zh/ref.array.php)
-    - [math函数](http://php.net/manual/zh/ref.math.php)
-    - [面向对象](http://php.net/manual/zh/language.oop5.php)
-    
-
-- Mysql(doing)
-
-  - 常用sql语句
-  - 引擎
-    - InnoDB
-    - MyISAM
-    - Memory
-    - Archive\Blackhole\CSV\Federated\merge\NDB
-  - 事务隔离级别
-    - READ UNCOMMITTED:未提交读
-    - READ COMMITTED：提交读/不可重复读
-    - REPEATABLE READ：可重复读(MYSQL默认事务隔离级别)
-    - SERIALIZEABLE：可串行化
+- Mysql
+  - 搜索引擎配置项
   - 索引
-    - B-Tree
-    - 哈希索引(hash index)
-    - 空间数据索引(R-Tree)
-    - 全文索引
-  - 锁
-    - 悲观锁
-    - 乐观锁
-  - 分表
-    - 垂直分表
-    - 水平分表
-  - sql优化
-  - 主从配置
+  - b tree
+  - 事务（隔离级别、锁）
+  - 搭建主从
+  - 搭建集群
+  - 触发器、分区
+  - 源码
 
 - Redis(doing)
 
-  - 常用命令
-  - 实现原理&与memcache区别
-  - 常见使用场景实战
-    - [缓存]
-    - [队列]
-    - [悲观锁]
-    - [乐观锁]
-    - [订阅/推送]
 
 - 设计模式(done/fixing)
 
@@ -129,23 +95,20 @@
       - [基数排序]
 
 - 网络基础(doing)
+  - http协议
 
-  - [互联网协议概述]
-  - [client和nginx简易交互过程]
-  - [nginx和php-fpm简易交互过程]
-  - [http]
-    - 报文
-      - 报文头部
-      - 报文体
-    - 常见13种状态码
-    - 方法method
-    - https
-    - http2
-    - websocket
+- nginx
+  - php-fpm配置项
+  - 工作原理
+  - 源码（事件处理、内存管理）
 
-- 计算机基础(doing)
+- C
+  - 语法与数据结构
+  - 多进程通信
+  - 网络编程
 
-  - [linux常用命令]
+- 计算机基础
+  - 命令
   - shell
-
-- 高并发相关(not-start)
+  - 系统原理：内存管理、磁盘管理、nfs、模块加载
+  
