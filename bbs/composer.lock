@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "edcbdc9f5b69174c59488b3bdc60cee1",
+    "content-hash": "9910cf1b01fb5f87986bdc477f86e20c",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -493,6 +493,36 @@
             "time": "2017-01-16T07:55:07+00:00"
         },
         {
+            "name": "noahbuscher/macaw",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/noahbuscher/Macaw.git",
+                "reference": "a4d5e3e1871143416f95d7ced189545fb5147148"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/noahbuscher/Macaw/zipball/a4d5e3e1871143416f95d7ced189545fb5147148",
+                "reference": "a4d5e3e1871143416f95d7ced189545fb5147148",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "NoahBuscher\\Macaw\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Simple PHP router class.",
+            "time": "2016-10-13 22:34:57"
+        },
+        {
             "name": "paragonie/random_compat",
             "version": "v2.0.10",
             "source": {
@@ -717,7 +747,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "noahbuscher/macaw": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

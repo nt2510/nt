@@ -23,6 +23,10 @@ class ComposerStaticInit66e0c4f93753fb94407bd5c73b693e16
         array (
             'Predis\\' => 7,
         ),
+        'N' => 
+        array (
+            'NoahBuscher\\Macaw\\' => 18,
+        ),
         'M' => 
         array (
             'MongoDB\\' => 8,
@@ -57,6 +61,10 @@ class ComposerStaticInit66e0c4f93753fb94407bd5c73b693e16
         'Predis\\' => 
         array (
             0 => __DIR__ . '/..' . '/predis/predis/src',
+        ),
+        'NoahBuscher\\Macaw\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/noahbuscher/macaw',
         ),
         'MongoDB\\' => 
         array (

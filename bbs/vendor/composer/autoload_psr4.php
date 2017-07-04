@@ -9,6 +9,7 @@ return array(
     'Symfony\\Polyfill\\Mbstring\\' => array($vendorDir . '/symfony/polyfill-mbstring'),
     'Symfony\\Component\\Translation\\' => array($vendorDir . '/symfony/translation'),
     'Predis\\' => array($vendorDir . '/predis/predis/src'),
+    'NoahBuscher\\Macaw\\' => array($vendorDir . '/noahbuscher/macaw'),
     'MongoDB\\' => array($vendorDir . '/mongodb/mongodb/src'),
     'Illuminate\\Support\\' => array($vendorDir . '/illuminate/support'),
     'Illuminate\\Events\\' => array($vendorDir . '/illuminate/events'),
