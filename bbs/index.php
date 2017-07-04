@@ -2,9 +2,9 @@
 
 require 'vendor/autoload.php';
 
-//require 'config/routers.php';
+require 'config/routers.php';
 
-
+/*
 $module = $_REQUEST['module'] ? $_REQUEST['module'] : 'Index';
 $module = ucfirst($module);
 $action = $_REQUEST['action'] ? $_REQUEST['action'] : 'index';
@@ -15,7 +15,7 @@ if(!file_exists($moduleFile)) die('不存在的module');
 //require_once $moduleFile;
 $moduleName = $namespaces.'\\'.$module."Controller";
 $controller = new $moduleName;
-$controller->{$action}();
+$controller->{$action}();*/
 
 
 
