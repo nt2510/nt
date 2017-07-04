@@ -7,7 +7,7 @@ require 'vendor/autoload.php';
 
 $module = $_REQUEST['module'] ? $_REQUEST['module'] : 'Index';
 $module = ucfirst($module);
-$action = $_REQUEST['action'] ? $_REQUEST['action'] : 'Index';
+$action = $_REQUEST['action'] ? $_REQUEST['action'] : 'index';
 $namespaces = "App\Home";
 define('BASE_PATH',str_replace('','/',dirname(__FILE__)));//定义系统目录
 $moduleFile = BASE_PATH."/app"."/Home/".$module."Controller.php";//die($moduleFile);
