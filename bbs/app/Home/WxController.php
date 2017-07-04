@@ -2,7 +2,7 @@
 namespace App\Home;
 
 use App\Component\Wx\WXBizMsgCrypt;
-
+require_once 'app/Component/wx/wxBizMsgCrypt.php';
 /**
  * wx
  * @author ntlee
