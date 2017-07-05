@@ -13,8 +13,32 @@ class WxController extends BaseController
 	
 	public function index()
 	{
-		//error_reporting();
-		//include_once "php/wxBizMsgCrypt.php";
+		$token = 'lifeng2017wx';
+		$signature = $_GET["signature"];
+		$timestamp = $_GET["timestamp"];
+		$nonce = $_GET["nonce"];
+		$echostr = $_GET['echostr'];
+		
+		$encrypt = '';
+		include_once "sha1.php";
+		$sha1 = new SHA1;
+		$array = $sha1->getSHA1($token, $timeStamp, $nonce, $encrypt);
+		$ret = $array[0];
+		if ($ret != 0) {
+			return $ret;
+		}
+		$signatureVer = $array[1];
+		
+		if($signature == $signatureVer){
+			return $echostr;
+		}else{
+			return 'error';
+		}
+	}
+	
+	public function index2()
+	{
+		
 		
 		// 第三方发送消息给公众平台
 		$encodingAesKey = "abcdefghijklmnopqrstuvwxyz0123456789ABCDEFG";
