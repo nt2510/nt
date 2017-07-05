@@ -13,13 +13,13 @@ class WxController extends BaseController
 {
 	
 	public function index()
-	{
+	{echo 'vc';
 		$wxLogic = new WxLogic();
 		//验证接口
 		if($_GET['echostr']){
 			$wxLogic->chkValid();
 		}
-		
+		echo 'ss';exit;
 		$params = array('content'=>'dvd');
 		$responseMsg = $wxLogic->responseMsg($params);
 		echo $responseMsg;
