@@ -24,7 +24,10 @@ class WxController extends BaseController
 		$content = $msg['content'];
 		
 		if($msgType == 'text'){
-			echo 'dvd';
+			$params = array('content'=>$content);
+			$responseMsg = $wxLogic->responseMsg($params);
+			echo $responseMsg;
+			exit;
 		}
 	}
 	

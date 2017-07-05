@@ -48,8 +48,26 @@ class WxLogic extends BaseLogic
 		
 		$result['msgType'] = $msgType;
 		$result['content'] = $content;
-		var_dump($post);var_dump($result);
+		
 		return $result;
+	}
+	
+	public function responseMsg($params)
+	{
+		$tml = "<xml>
+<ToUserName><![CDATA[%s]]></ToUserName>
+<FromUserName><![CDATA[%s]]></FromUserName>
+<CreateTime>%d</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[%s]]></Content>
+</xml>";
+		$toUserName = 'ntlee2510';
+		$fromUserName = 'ntlee2510';
+		$createtime = time();
+		$content = $params['content'] ? $params['content'] : '';
+		$msg  =sprintf($tml,$toUserName,$fromUserName,$createtime,$content);
+		
+		return $msg;
 	}
 
 }
