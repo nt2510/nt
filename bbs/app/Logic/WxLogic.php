@@ -45,24 +45,24 @@ class WxLogic extends BaseLogic
 		$msgType = $msgTypeArr->item(0)->nodeValue;
 		$contentArr = $xml_tree->getElementsByTagName('Content');
 		$content = $contentArr->item(0)->nodeValue;
+		$toUserNameArr = $xml_tree->getElementsByTagName('ToUserName');
+		$toUserName = $toUserNameArr->item(0)->nodeValue;
+		$fromUserNameArr = $xml_tree->getElementsByTagName('FromUserName');
+		$fromUserName = $fromUserNameArr->item(0)->nodeValue;
 		
 		$result['msgType'] = $msgType;
 		$result['content'] = $content;
+		$result['toUserName'] = $toUserName;
+		$result['fromUserName'] = $fromUserName;
 		
 		return $result;
 	}
 	
 	public function responseMsg($params)
 	{
-		$tml = "<xml>
-<ToUserName><![CDATA[%s]]></ToUserName>
-<FromUserName><![CDATA[%s]]></FromUserName>
-<CreateTime>%d</CreateTime>
-<MsgType><![CDATA[text]]></MsgType>
-<Content><![CDATA[%s]]></Content>
-</xml>";
-		$toUserName = 'ntlee2510';
-		$fromUserName = 'ntlee2510';
+		$tml = "<xml><ToUserName><![CDATA[%s]]></ToUserName><FromUserName><![CDATA[%s]]></FromUserName><CreateTime>%d</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA[%s]]></Content></xml>";
+		$toUserName = $params['toUserName'];
+		$fromUserName = $params['fromUserName'];
 		$createtime = time();
 		$content = $params['content'] ? $params['content'] : '';
 		$msg  =sprintf($tml,$toUserName,$fromUserName,$createtime,$content);
