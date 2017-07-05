@@ -19,7 +19,7 @@ class WxController extends BaseController
 		$nonce = $_GET["nonce"];
 		$echostr = $_GET['echostr'];
 		
-		$encrypt = '';
+		/*$encrypt = '';
 		include_once "sha1.php";
 		$sha1 = new SHA1;
 		$array = $sha1->getSHA1($token, $timeStamp, $nonce, $encrypt);
@@ -27,7 +27,13 @@ class WxController extends BaseController
 		if ($ret != 0) {
 			return $ret;
 		}
-		$signatureVer = $array[1];
+		$signatureVer = $array[1];*/
+		
+		$array = array($token, $timestamp, $nonce);
+		sort($array, SORT_STRING);
+		$str = implode($array);
+		$signatureVer = sha1($str);
+		
 		
 		if($signature == $signatureVer){
 			return $echostr;
