@@ -36,9 +36,11 @@ class WxController extends BaseController
 		
 		
 		if($signature == $signatureVer){
-			return $echostr;
+			echo $echostr;
+			return;
 		}else{
-			return 'error';
+			echo 'error';
+			return;
 		}
 	}
 	
