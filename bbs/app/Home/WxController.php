@@ -19,22 +19,15 @@ class WxController extends BaseController
 		if($_GET['echostr']){
 			$wxLogic->chkValid();
 		}
-		//echo 'ss';exit;
-		//$params = array('content'=>'dvd');
-		//$responseMsg = $wxLogic->responseMsg($params);
-		//echo $responseMsg;
-		//exit;
 		
 		$msg = $wxLogic->getMsg();
 		$msgType = $msg['msgType'];
 		$content = $msg['content'];
 		$toUserName = $msg['toUserName'];
 		$fromUserName = $msg['fromUserName'];
-		
-		
-		
+				
 		if($msgType == 'text'){
-			$params = array('content'=>$content,'toUserName'=>$toUserName,'fromUserName'=>$fromUserName);
+			$params = array('content'=>$content,'toUserName'=>$fromUserName,'fromUserName'=>$toUserName);
 			$responseMsg = $wxLogic->responseMsg($params);
 			echo $responseMsg;
 			exit;
