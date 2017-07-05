@@ -34,7 +34,7 @@ class WxController extends BaseController
 			print($errCode . "\n");
 		}
 		//exit;
-		$xml_tree = new DOMDocument();
+		$xml_tree = new \DOMDocument();
 		$xml_tree->loadXML($encryptMsg);
 		$array_e = $xml_tree->getElementsByTagName('Encrypt');
 		$array_s = $xml_tree->getElementsByTagName('MsgSignature');
