@@ -19,6 +19,12 @@ class WxController extends BaseController
 		if($_GET['echostr']){
 			$wxLogic->chkValid();
 		}
+		
+		$params = array('content'=>'dvd');
+		$responseMsg = $wxLogic->responseMsg($params);
+		echo $responseMsg;
+		exit;
+		
 		$msg = $wxLogic = $wxLogic->getMsg();
 		$msgType = $msg['msgType'];
 		$content = $msg['content'];
