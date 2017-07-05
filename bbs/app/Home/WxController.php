@@ -3,6 +3,7 @@ namespace App\Home;
 
 use App\Component\Wx\WXBizMsgCrypt;
 require_once 'app/Component/wx/wxBizMsgCrypt.php';
+use App\Logic\WxLogic;
 /**
  * wx
  * @author ntlee
@@ -13,34 +14,10 @@ class WxController extends BaseController
 	
 	public function index()
 	{
-		$token = 'lifeng2017wx';
-		$signature = $_GET["signature"];
-		$timestamp = $_GET["timestamp"];
-		$nonce = $_GET["nonce"];
-		$echostr = $_GET['echostr'];
-		
-		/*$encrypt = '';
-		include_once "sha1.php";
-		$sha1 = new SHA1;
-		$array = $sha1->getSHA1($token, $timeStamp, $nonce, $encrypt);
-		$ret = $array[0];
-		if ($ret != 0) {
-			return $ret;
-		}
-		$signatureVer = $array[1];*/
-		
-		$array = array($token, $timestamp, $nonce);
-		sort($array, SORT_STRING);
-		$str = implode($array);
-		$signatureVer = sha1($str);
-		
-		
-		if($signature == $signatureVer){
-			echo $echostr;
-			return;
-		}else{
-			echo 'error';
-			return;
+		$wxLogic = new WxLogic();
+		//验证接口
+		if($_GET['echostr']){
+			$wxLogic->chkValid();
 		}
 	}
 	
