@@ -38,7 +38,8 @@ class WxLogic extends BaseLogic
 	public function getMsg()
 	{
 		//$post = $GLOBALS["HTTP_RAW_POST_DATA"];
-		$post = $_POST;
+		//$post = $_POST;
+		$post = file_get_contents("php://input");
 		$xml_tree = new \DOMDocument();
 		$xml_tree->loadXML($post);
 		$msgTypeArr = $xml_tree->getElementsByTagName('MsgType');
