@@ -25,7 +25,7 @@ class WxController extends BaseController
 		//echo $responseMsg;
 		//exit;
 		
-		$msg = $wxLogic = $wxLogic->getMsg();
+		$msg = $wxLogic->getMsg();
 		$msgType = $msg['msgType'];
 		$content = $msg['content'];
 		$toUserName = $msg['toUserName'];
