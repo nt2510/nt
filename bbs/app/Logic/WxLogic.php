@@ -1,7 +1,12 @@
 <?php
 namespace App\Logic;
 
-
+/**
+ * 微信
+ * @author ntlee
+ * @version 2017-07-05
+ *
+ */
 class WxLogic extends BaseLogic 
 {
 	
@@ -70,7 +75,27 @@ class WxLogic extends BaseLogic
 		
 		return $msg;
 	}
-
+	
+	public function getToken()
+	{
+		$tplUrl = "%scgi-bin/token?grant_type=client_credential&appid=%s&secret=%s";
+		$domain = "https://api.weixin.qq.com/";
+		$appid = "wxa45a5acfbc36a358";
+		$secrect = "6f22c1cf74fa0a596023f87c64b2baae";
+		$url = sprintf($tplUrl,$domain,$appid,$secrect);
+		
+		$ch = curl_init($url);
+		curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
+		curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);//跳过证书验证
+		curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);  // 从证书中检查SSL加密算法是否存在
+		$res = curl_exec($ch);		
+		curl_close($ch);
+		$resArr = json_decode($res, true);var_dump($res);print_r($resArr);
+		$access_token = $resArr['access_token'];
+		return $access_token;
+	}
+	
+	
 }
 
 

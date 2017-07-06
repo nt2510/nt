@@ -34,6 +34,11 @@ class WxController extends BaseController
 		}
 	}
 	
+	public function createMenu()
+	{
+		
+	}
+	
 	public function index2()
 	{
 		
