@@ -84,17 +84,27 @@ class WxLogic extends BaseLogic
 		$secrect = "6f22c1cf74fa0a596023f87c64b2baae";
 		$url = sprintf($tplUrl,$domain,$appid,$secrect);
 		
-		$ch = curl_init($url);
-		curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
-		curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);//跳过证书验证
-		curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);  // 从证书中检查SSL加密算法是否存在
-		$res = curl_exec($ch);		
-		curl_close($ch);
-		$resArr = json_decode($res, true);var_dump($res);print_r($resArr);
-		$access_token = $resArr['access_token'];
+		/*$res = $this->httpQuest($url);var_dump($res);		
+		$resArr = json_decode($res, true);
+		$access_token = $resArr['access_token'];*/
+		$access_token = "rYf3kHt5SPAT93O2Hch_G08ffBGsd91r5cQAB-u81xUyiuHZCgDiH7eCmIgsusmgxTDHHvy2_GzC3P8epktbPiKr2_GK8bM1R4EfGgKM476xeApdPRwCGt1babrZGf3lIIMfADAWWA";
 		return $access_token;
 	}
 	
+	public function httpQuest($url,$data = array())
+	{
+		$ch = curl_init($url);		
+		curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);//跳过证书验证
+		curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);  // 从证书中检查SSL加密算法是否存在
+		if(!empty($data)){
+			curl_setopt($ch, CURLOPT_POST, 1);
+			curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+		}
+		curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
+		$res = curl_exec($ch);
+		curl_close($ch);
+		return $res;
+	}
 	
 }
 

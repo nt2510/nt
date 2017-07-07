@@ -4,6 +4,7 @@ namespace App\Home;
 use App\Component\Wx\WXBizMsgCrypt;
 require_once 'app/Component/wx/wxBizMsgCrypt.php';
 use App\Logic\WxLogic;
+use App\Logic\WxMenuLogic;
 /**
  * wx
  * @author ntlee
@@ -36,7 +37,9 @@ class WxController extends BaseController
 	
 	public function createMenu()
 	{
-		
+		$wxMenuLogic = new WxMenuLogic();
+		$res = $wxMenuLogic->create();
+		var_dump($res);
 	}
 	
 	public function index2()
@@ -79,6 +82,11 @@ class WxController extends BaseController
 		} else {
 			print($errCode . "\n");
 		}	
+	}
+	
+	public function hello()
+	{
+		echo "this is a hello page for wechat";
 	}
 		
 }
