@@ -17,7 +17,7 @@ Install_Libiconv
 Install_Libmcrypt
 
 
-read -p 'Please select the software you want to install. 1 nginx 2 php 3 mysql ' selection
+read -p 'Please select the software you want to install. 1 nginx 2 php5.6 3 mysql 4 php7' selection
 
 echo $selection
 case ${selection} in 
@@ -29,6 +29,9 @@ case ${selection} in
     ;;
     3)
         Install_MySQL
+    ;;
+    4)
+        Install_PHP70
     ;;
     *)
         echo 'wrong num'

@@ -5,7 +5,6 @@ Install_Libmcrypt()
     cd ${cur_dir}/src
     rm -fr libmcrypt-2.5.8
     Download_File https://sourceforge.net/projects/mcrypt/files/Libmcrypt/2.5.8/libmcrypt-2.5.8.tar.gz/download libmcrypt-2.5.8.tar.gz
-    #wget -O libmcrypt-2.5.8.tar.gz  https://sourceforge.net/projects/mcrypt/files/Libmcrypt/2.5.8/libmcrypt-2.5.8.tar.gz/download
     tar -zxvf libmcrypt-2.5.8.tar.gz
     cd libmcrypt-2.5.8
     ./configure --prefix=/usr/local/libmcrypt
@@ -22,7 +21,6 @@ Install_Libiconv()
     echo $(pwd)
     rm -fr libiconv-1.14
     Download_File http://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.14.tar.gz libiconv-1.14.tar.gz
-    #wget http://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.14.tar.gz
     tar zxvf libiconv-1.14.tar.gz
     cd libiconv-1.14
     ./configure --prefix=/usr/local/libiconv
