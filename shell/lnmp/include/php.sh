@@ -131,6 +131,7 @@ echo '###start configure php###'
 --with-bz2 \
 --with-gd \
 --enable-exif \
+--enable-intl \
 
 echo '###end configure php###'
 
