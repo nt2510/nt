@@ -29,3 +29,16 @@ Install_Libiconv()
     make
     make install
 }
+
+Install_Libjpeg()
+{
+    cd ${cur_dir}/src
+    echo $(pwd)
+    rm -fr jpeg-9c
+    Download_File http://www.ijg.org/files/jpegsrc.v9c.tar.gz jpegsrc.v9c.tar.gz
+    tar zxvf jpegsrc.v9c.tar.gz
+    cd jpeg-9c
+    ./configure --prefix=/usr/local/jpeg --enable-shared --enable-static
+    make   
+    make install
+}
