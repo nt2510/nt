@@ -1,0 +1,27 @@
+apt-get install git
+
+adduser git
+
+cd /home/git/
+mkdir .ssh
+chmod 755 .ssh
+touch .ssh/authorized_keys
+chmod 644 .ssh/authorized_keys
+
+cd /home
+mkdir gitrepo
+chown git:git gitrepo/
+cd gitrepo
+
+git init --bare nt.git
+Initialized empty Git repository in /home/gitrepo/nt.git/
+chown -R git:git nt.git
+
+git clone ssh://git@192.168.0.1:/home/gitrepo/nt.git
+
+
+#add a new repos
+cd /home/gitrepo
+git init --bare nt_sec.git
+chown -R git:git nt_sec.git
+git clone ssh://git@192.168.0.1:/home/gitrepo/nt_sec.git

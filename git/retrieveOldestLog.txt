@@ -1,0 +1,4 @@
+git log --reverse
+
+--reverse
+           Output the commits chosen to be shown (see Commit Limiting section above) in reverse order. Cannot be combined with --walk-reflogs.

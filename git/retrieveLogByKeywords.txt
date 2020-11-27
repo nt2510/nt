@@ -1,0 +1,10 @@
+git log --grep pay
+git log --grep pay--stat
+
+--grep=<pattern>
+           Limit the commits output to ones with log message that matches the specified pattern (regular expression). With more than one --grep=<pattern>,
+           commits whose message matches any of the given patterns are chosen (but see --all-match).
+
+           When --show-notes is in effect, the message from the notes is matched as if it were part of the log message.
+
+
