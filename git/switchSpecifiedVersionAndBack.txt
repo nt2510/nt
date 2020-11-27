@@ -1,0 +1,6 @@
+switch to specified version
+git checkout version-hash-number
+
+
+switch back
+git checkout master
