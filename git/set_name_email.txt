@@ -1,0 +1,17 @@
+git config --local --list
+
+get
+git config user.name
+git config user.email
+
+set
+git config user.name NT
+git config user.email NT@gmail.com
+
+get
+git config --global user.name
+git config --global user.email
+
+set
+git config --global user.name NT
+git config --global user.email NT@gmail.com
